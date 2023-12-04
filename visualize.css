@@ -11,6 +11,13 @@ body {
 
 h1 {
   padding: 20px;
+  background: linear-gradient(55deg, #12C2E9 0%, #c471ed 50%, #f64f59 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 300%;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 p {
@@ -20,10 +27,7 @@ p {
   margin-bottom: 10px;
 }
 
-canvas {
 
-  float: right;
-}
 
 .segment0 {
   color: black;
@@ -75,9 +79,36 @@ canvas {
   background: #a5da76
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+}
+
 .info {
-  font-size: 80%;
-  margin-left: 60px;
-  padding: 5px;
+  padding: 20px;
+  font-size: 120%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: 100;
+}
+
+.info p {
   margin-bottom: 10px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    order: 1;
+  }
+
+
+
 }
